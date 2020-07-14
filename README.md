@@ -1,1 +1,1 @@
-"# wp-theme-developemnt-01" 
+WordPress basic Theme developed by me.
