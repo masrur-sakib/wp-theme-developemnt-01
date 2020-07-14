@@ -1,0 +1,75 @@
+/*
+Theme Name: Sakib Theme
+Text Domain: sakib
+Version: 1.0
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: Theme is designed & Developed by Masrur Sakib.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Author: Masrur Sakib
+Author URI: https://masrursakib.site/
+Theme URI: https://masrursakib.site/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+*/
+
+h1.heading {
+    font-family: "Arial Black";
+    width: 700px;
+    margin: auto;
+    margin-bottom: 70px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+h3.tagline{
+    font-family: Arial;
+    margin:auto;
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    width: 700px;
+    text-align: center;
+}
+
+h2.post-title {
+    margin-bottom: 30px;
+}
+
+.post {
+    margin-bottom: 50px;
+}
+
+.post p{
+    font-family: "Helvetica Neue";
+    line-height: 1.7em;
+    font-size: 18px;
+}
+
+.post .row:nth-child(2) {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.post:last-child .row:nth-child(2){
+    border-bottom:none;
+}
+
+.post_pagination{
+    margin-bottom: 50px;
+}
+
+.footer{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #222;
+    color:#ccc;
+}
+
+.tags li{
+    color: #3D9970;
+}
