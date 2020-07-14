@@ -1,1 +1,1 @@
-WordPress basic Theme developed by me.
+WordPress Basic Theme developed by me.
