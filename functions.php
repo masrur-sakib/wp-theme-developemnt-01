@@ -24,6 +24,28 @@ function sakib_sidebar(){
             'after_title'   => '</h2>',
         )
     );
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer Left Area', 'sakib' ),
+            'id'            => 'footer-left',
+            'description'   => __( 'Footer Left Widget Area', 'sakib' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        )
+    );
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer Right Area', 'sakib' ),
+            'id'            => 'footer-right',
+            'description'   => __( 'Footer Right Widget Area', 'sakib' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        )
+    );
 }
 add_action("widgets_init", "sakib_sidebar");
 
