@@ -11,3 +11,19 @@ function sakib_assets(){
     wp_enqueue_style("bootstrap", "//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 }
 add_action("wp_enqueue_scripts", "sakib_assets");
+
+function sakib_sidebar(){
+    register_sidebar(
+        array(
+            'name'          => __( 'Right Widgets Area', 'sakib' ),
+            'id'            => 'sidebar-1',
+            'description'   => __( 'Right Sidebar', 'sakib' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        )
+    );
+}
+add_action("widgets_init", "sakib_sidebar");
+
