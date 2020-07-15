@@ -49,3 +49,19 @@ function sakib_sidebar(){
 }
 add_action("widgets_init", "sakib_sidebar");
 
+//Filter Hook to Show Password Form for Password Protected Post
+
+/*function alpha_protected_post_excerpt($excerpt){
+    if(!post_password_required()){
+        return $excerpt;
+    }else{
+        echo get_the_password_form();
+    }
+}
+
+add_filter("the_excerpt", "alpha_protected_post_excerpt");*/
+
+function sakib_protected_post_title_change(){
+    return "%s";
+}
+add_filter("protected_title_format", "sakib_protected_post_title_change");
