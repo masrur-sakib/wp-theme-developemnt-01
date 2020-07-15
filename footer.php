@@ -14,6 +14,18 @@
                     dynamic_sidebar("footer-right");
                 }
                 ?>
+                <div class="footer_menu">
+                    <h2>Page Links</h2>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'footermenu',
+                            'menu_id'        => 'footermenucontainer',
+                            'menu_class'     => 'list-inline text-left',
+                        )
+                    )
+                    ?>
+                </div>
             </div>
         </div>
         <div>

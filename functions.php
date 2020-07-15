@@ -3,6 +3,8 @@ function sakib_bootstrapping(){
     load_theme_textdomain("sakib");
      add_theme_support("post-thumbnails");
     add_theme_support("title-tag");
+    register_nav_menu("topmenu", __("Top Menu", "sakib"));
+    register_nav_menu("footermenu", __("Footer Menu", "sakib"));
 }
 add_action("after_setup_theme","sakib_bootstrapping");
 
@@ -65,3 +67,10 @@ function sakib_protected_post_title_change(){
     return "%s";
 }
 add_filter("protected_title_format", "sakib_protected_post_title_change");
+
+//Adding a class to every nav link to implement horizontal view instead of vertical view
+function sakib_nav_menu_class($classes , $item){
+    $classes[] = "list-inline-item";
+    return $classes;
+}
+add_filter("nav_menu_css_class", "sakib_nav_menu_class", 10, 2);
