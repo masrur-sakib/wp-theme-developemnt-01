@@ -85,3 +85,19 @@ function sakib_nav_menu_class($classes , $item){
     return $classes;
 }
 add_filter("nav_menu_css_class", "sakib_nav_menu_class", 10, 2);
+
+
+function sakib_about_page_template_banner(){
+    if(is_page()){
+        $sakib_feat_image = get_the_post_thumbnail_url(null, "large");
+
+    ?>
+    <style>
+        .page-header{
+            background-image: url(<?php echo $sakib_feat_image; ?>);
+        }
+    </style>
+    <?php
+    }
+}
+add_action("wp_head", "sakib_about_page_template_banner");
