@@ -10,6 +10,7 @@ function sakib_bootstrapping(){
     load_theme_textdomain("sakib");
     add_theme_support("post-thumbnails");
     add_theme_support("title-tag");
+    add_theme_support("custom-header");
     register_nav_menu("topmenu", __("Top Menu", "sakib"));
     register_nav_menu("footermenu", __("Footer Menu", "sakib"));
 }
@@ -87,7 +88,7 @@ function sakib_nav_menu_class($classes , $item){
 add_filter("nav_menu_css_class", "sakib_nav_menu_class", 10, 2);
 
 
-function sakib_about_page_template_banner(){
+function sakib_header_styles(){
     if(is_page()){
         $sakib_feat_image = get_the_post_thumbnail_url(null, "large");
 
@@ -99,5 +100,20 @@ function sakib_about_page_template_banner(){
     </style>
     <?php
     }
+
+    if(is_front_page()){
+        if(current_theme_supports("custom-header")){
+        ?>
+        <style>
+            .header{
+                background-image: url(<?php echo header_image(); ?>);
+                background-size: cover;
+                margin-bottom: 50px;
+            }
+        </style>
+        <?php
+
+        }
+    }
 }
-add_action("wp_head", "sakib_about_page_template_banner");
+add_action("wp_head", "sakib_header_styles");
