@@ -11,13 +11,17 @@ function sakib_bootstrapping(){
     add_theme_support("post-thumbnails");
     add_theme_support("title-tag");
     $sakib_custom_header_details = array(
-            "header-text"           => true,
-            "default-text-color"    => "#222",
+        "header-text"           => true,
+        "default-text-color"    => "#222",
+        "width"                 => 1200,
+        "height"                => 600,
+        "flex-width"            => true,
+        "flex-height"           => true
     );
     add_theme_support("custom-header", $sakib_custom_header_details);
     $sakib_custom_logo_details = array(
-            "width"     => "100",
-            "height"    => "100"
+        "width"     => "100",
+        "height"    => "100"
     );
     add_theme_support("custom-logo", $sakib_custom_logo_details);
     register_nav_menu("topmenu", __("Top Menu", "sakib"));
