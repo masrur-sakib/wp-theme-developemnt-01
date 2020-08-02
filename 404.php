@@ -1,8 +1,8 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <body <?php body_class(); ?> >
+<?php get_template_part("/template-parts/common/hero"); ?>
+
 <div class="container errorview">
     <div class="row">
         <div class="col-md-12">
